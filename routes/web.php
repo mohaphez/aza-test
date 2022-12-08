@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/convert', function () {
+    return view('convert.spellout');
+});
+
 Route::get("price", function () {
     $currency = app(ICurrency::class);
     $prices = $currency->getCurrencyPrice();

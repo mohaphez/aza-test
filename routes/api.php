@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ConvertController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\MovieController;
 use App\Http\Middleware\CacheRequest;
 use Illuminate\Support\Facades\Route;
@@ -15,4 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("movie/search", MovieController::class)->middleware(CacheRequest::class);
+Route::middleware([CacheRequest::class])->group(
+    function () {
+        Route::get("movie/search", MovieController::class);
+        Route::get("languages/list", [LanguageController::class, 'list']);
+    }
+);
+
+Route::post("convert/spellout", [ConvertController::class, 'spellout']);

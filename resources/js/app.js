@@ -16,8 +16,9 @@ import { createApp } from "vue";
 const app = createApp({});
 
 import GridSearch from "./components/GridSearch.vue";
+import SpellOut from "./components/SpellOut.vue";
 app.component("grid-search-component", GridSearch);
-
+app.component("convert-spellout-component", SpellOut);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
