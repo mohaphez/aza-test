@@ -15,8 +15,13 @@ import { createApp } from "vue";
 
 const app = createApp({});
 
+import AutoComplete from "./components/AutoComplete.vue";
 import GridSearch from "./components/GridSearch.vue";
+import HotelSearch from "./components/HotelSearch.vue";
 import SpellOut from "./components/SpellOut.vue";
+
+app.component("auto-complete-component", AutoComplete);
+app.component("hotel-search-component", HotelSearch);
 app.component("grid-search-component", GridSearch);
 app.component("convert-spellout-component", SpellOut);
 /**

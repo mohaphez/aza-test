@@ -1,5 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-<grid-search-component />
+<hotel-search-component />
+{{--
+<grid-search-component /> --}}
 @endsection

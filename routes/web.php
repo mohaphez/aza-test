@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HotelController;
 use App\Models\StarLog;
 use App\Service\Currency\ICurrency;
 use Illuminate\Http\Request;

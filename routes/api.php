@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ConvertController;
+use App\Http\Controllers\HotelController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\MovieController;
 use App\Http\Middleware\CacheRequest;
@@ -16,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::get('/search/hotel', [HotelController::class, 'search']);
+Route::get('/cities', [HotelController::class, 'getCities']);
+
 
 Route::middleware([CacheRequest::class])->group(
     function () {
